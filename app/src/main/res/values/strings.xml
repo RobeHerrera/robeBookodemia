@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">robeBookodemia</string>
+    <string name="txtWelcome">¡Bienvenido!</string>
+    <string name="txtLogin">INICIAR SESIÓN</string>
+    <string name="txtNoRegister">¿Todavía no tienes cuenta? Regístrate</string>
+    <string name="txtUser">Usuario</string>
+    <string name="txtEmail">Correo</string>
+    <string name="txtPassword">Contraseña</string>
+    <string name="txtConfirmPassword">Confirma Contraseña</string>
+    <string name="txtHeadingRegister">Registra tu información</string>
+    <string name="txtNewAccount">Crear Cuenta</string>
+
 </resources>
