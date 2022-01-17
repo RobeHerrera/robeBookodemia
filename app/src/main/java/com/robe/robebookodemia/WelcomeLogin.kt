@@ -1,31 +1,27 @@
 package com.robe.robebookodemia
 
-import Interfaces.NavigationHost
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity(), NavigationHost {
+class MainActivity : AppCompatActivity() {
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.welcome_login)
 
-        if (savedInstanceState == null) {
-            supportFragmentManager
-                .beginTransaction()
-                //.add(R.id.container.())
-                .commit()
-        }
-    }
-    override fun navigateTo(fragment: Fragment, addToBackstack: Boolean) {
-        val transaction = supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.container, fragment)
+        var btnNewRegister:Button = findViewById(R.id.btnNewRegister)
+        btnNewRegister.setOnClickListener {
 
-        if (addToBackstack) {
-            transaction.addToBackStack(null)
+//            if (savedInstanceState == null) {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.container, NewRegister.newInstance())
+                    .commitNow()
+//            }
         }
 
-        transaction.commit()
     }
+
 }
