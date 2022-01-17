@@ -12,15 +12,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.welcome_login)
 
-        var btnNewRegister:Button = findViewById(R.id.btnNewRegister)
+        var btnNewRegister:Button = findViewById(R.id.btnBackNewRegister)
         btnNewRegister.setOnClickListener {
 
-//            if (savedInstanceState == null) {
+            if (savedInstanceState == null) {
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.container, NewRegister.newInstance())
                     .commitNow()
-//            }
+            }
         }
+
+
+//        var btnBack:Button = findViewById(R.id.btnBackNewRegister)
+//        btnBack.setOnClickListener {
+//
+//            if (savedInstanceState == null) {
+//                supportFragmentManager.beginTransaction()
+//                    .remove(NewRegister.newInstance())
+//                    .commitNow()
+//            }
+//        }
 
     }
 

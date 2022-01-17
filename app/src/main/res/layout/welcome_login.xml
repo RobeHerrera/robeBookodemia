@@ -114,7 +114,7 @@
 
 
             <Button
-                android:id="@+id/btnNewRegister"
+                android:id="@+id/btnBackNewRegister"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

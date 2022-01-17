@@ -29,7 +29,7 @@
 <!--                android:forceHasOverlappingRendering="true"-->
 
             <Button
-                android:id="@+id/btnNewRegister"
+                android:id="@+id/btnBackNewRegister"
                 style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnNewRegister" />
+                app:layout_constraintTop_toBottomOf="@+id/btnBackNewRegister" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
