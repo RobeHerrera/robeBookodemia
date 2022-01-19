@@ -13,6 +13,7 @@
         android:layout_height="198dp"
         android:scaleType="centerCrop"
         android:src="@drawable/banner"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,7 +23,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="90dp"
         android:gravity="center"
         android:onClick="goBack"
         android:outlineAmbientShadowColor="@color/teal_700"
@@ -57,25 +58,56 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBanner">
+        app:layout_constraintTop_toBottomOf="@+id/imageBanner">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <!--                android:forceHasOverlappingRendering="true"-->
 
+
+            <ImageView
+                android:id="@+id/imgBook4"
+                android:layout_width="109dp"
+                android:layout_height="155dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardView"
+                app:layout_constraintStart_toStartOf="@+id/cardView"
+                app:srcCompat="@drawable/libro_2" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="32dp"
+                android:elevation="10dp"
+                android:translationZ="10dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/cardView"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgBook2"
+                    android:layout_width="109dp"
+                    android:layout_height="155dp"
+                    app:srcCompat="@drawable/libro_2" />
+
+            </FrameLayout>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
                 android:layout_width="387dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="64dp"
                 android:layout_marginEnd="16dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="8dp"
@@ -93,7 +125,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginEnd="80dp"
                         android:gravity="center"
                         android:text="Book Mockup"
                         android:textColor="@color/blue_900"
@@ -138,9 +170,9 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                app:contentPadding="8dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="8dp"
+                app:contentPadding="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView">
@@ -210,9 +242,9 @@
                 android:layout_marginEnd="16dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="8dp"
+                app:contentPadding="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:contentPadding="8dp"
                 app:layout_constraintTop_toBottomOf="@+id/cardView2">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -288,6 +320,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -300,9 +333,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/libro_2" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:itemIconTint="@color/blue_900"

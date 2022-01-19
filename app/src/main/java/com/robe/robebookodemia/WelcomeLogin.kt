@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
     fun myLogin(view: View) {
         val message = "Esto es un extra message"
-        val intent = Intent(this, HomeBooks::class.java)
+        val intent = Intent(this, DetailBooks::class.java)
         startActivity(intent)
     }
 }
