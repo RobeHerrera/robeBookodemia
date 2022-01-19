@@ -10,9 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RobeBookodemia">
         <activity
-            android:name=".NewAccount"
-            android:parentActivityName=".MainActivity"
+            android:name=".DetailBooks"
             android:exported="false" />
+        <activity
+            android:name=".HomeBooks"
+            android:exported="false" />
+        <activity
+            android:name=".NewAccount"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
