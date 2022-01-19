@@ -10,28 +10,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.welcome_login)
-
-//        var btnNewRegister:Button = findViewById(R.id.btnBackNewRegister)
-//        btnNewRegister.setOnClickListener {
-//
-//            if (savedInstanceState == null) {
-//                supportFragmentManager.beginTransaction()
-//                    .replace(R.id.container, NewRegister.newInstance())
-//                    .commitNow()
-//            }
-//        }
-
-
-//        var btnBack:Button = findViewById(R.id.btnBackNewRegister)
-//        btnBack.setOnClickListener {
-//
-//            if (savedInstanceState == null) {
-//                supportFragmentManager.beginTransaction()
-//                    .remove(NewRegister.newInstance())
-//                    .commitNow()
-//            }
-//        }
-
     }
 
     /** Called when the user taps the Send button */
@@ -43,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     fun myLogin(view: View) {
         val message = "Esto es un extra message"
-        val intent = Intent(this, DetailBooks::class.java)
+        val intent = Intent(this, HomeBooks::class.java)
         startActivity(intent)
     }
 }
