@@ -38,10 +38,12 @@ class MainActivity : AppCompatActivity() {
     fun newAccount(view: View) {
         val message = "Esto es un extra message"
         val intent = Intent(this, NewAccount::class.java)
-//            .apply {
-//            putExtra(EXTRA_MESSAGE, message)
-//        }
         startActivity(intent)
+    }
 
+    fun myLogin(view: View) {
+        val message = "Esto es un extra message"
+        val intent = Intent(this, HomeBooks::class.java)
+        startActivity(intent)
     }
 }

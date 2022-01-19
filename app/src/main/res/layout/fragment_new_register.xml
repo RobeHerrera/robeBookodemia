@@ -19,7 +19,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imgBanner"
                 android:layout_width="411dp"
                 android:layout_height="731dp"
                 android:src="@drawable/welcome_bookodemia"

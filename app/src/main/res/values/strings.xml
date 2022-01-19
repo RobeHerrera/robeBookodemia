@@ -11,5 +11,6 @@
     <string name="txtNewAccount">Crear Cuenta</string>
     <string name="txtNewAccountDes">Estas a unos cuantos pasos de vivir la mejor experiencia</string>
     <string name="txtBack">Regresar</string>
+    <string name="txtLorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, tas fringilla. Adipiscing elit pellentesque habitant morbi tristique senectus et. Egestas maecenas pharetra convallis posuere morbi</string>
 
 </resources>
