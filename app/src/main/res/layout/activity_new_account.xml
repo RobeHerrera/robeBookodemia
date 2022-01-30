@@ -19,17 +19,19 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imgBanner"
-                android:layout_width="411dp"
+                android:id="@+id/img_new_account"
+                android:layout_width="0dp"
                 android:layout_height="731dp"
+                android:contentDescription="@string/banner"
+                android:scaleType="fitXY"
                 android:src="@drawable/newregisterbookodemia"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
             <!--                android:forceHasOverlappingRendering="true"-->
 
             <Button
-                android:id="@+id/btnBackNewRegister"
+                android:id="@+id/btnBackRegister"
                 style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -45,7 +47,8 @@
                 app:icon="@drawable/ic_baseline_arrow_back_ios_24"
                 app:iconPadding="-10dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="p" />
 
             <TextView
                 android:id="@+id/txtNewRegDes"
@@ -60,7 +63,8 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnBackNewRegister" />
+                app:layout_constraintTop_toBottomOf="@+id/btnBackRegister"
+                tools:ignore="TextContrastCheck" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
@@ -97,7 +101,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/otf_user"
+                        android:id="@+id/til_reg_user"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -110,13 +114,15 @@
                         app:layout_constraintTop_toBottomOf="@+id/textNewRegisterHeader">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tiet_reg_user"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="textPersonName" />
+                            android:inputType="textPersonName"
+                            tools:ignore="TextContrastCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/otf_email"
+                        android:id="@+id/til_reg_email"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -126,16 +132,18 @@
                         android:hint="@string/txtEmail"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/otf_user">
+                        app:layout_constraintTop_toBottomOf="@+id/til_reg_user">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tiet_reg_email"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="textEmailAddress" />
+                            android:inputType="textEmailAddress"
+                            tools:ignore="TextContrastCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/otf_pass"
+                        android:id="@+id/til_reg_pass1"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -145,16 +153,18 @@
                         android:hint="@string/txtPassword"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/otf_email">
+                        app:layout_constraintTop_toBottomOf="@+id/til_reg_email">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tiet_reg_pass1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="textPassword" />
+                            android:inputType="textPassword"
+                            tools:ignore="TextContrastCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/otf_passConfirm"
+                        android:id="@+id/til_reg_pass2"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -164,12 +174,14 @@
                         android:hint="@string/txtConfirmPassword"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/otf_pass">
+                        app:layout_constraintTop_toBottomOf="@+id/til_reg_pass1">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tiet_reg_pass2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="textPassword" />
+                            android:inputType="textPassword"
+                            tools:ignore="TextContrastCheck" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -177,7 +189,7 @@
             </androidx.cardview.widget.CardView>
 
             <Button
-                android:id="@+id/btnLogin2"
+                android:id="@+id/btn_new_register"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="24dp"

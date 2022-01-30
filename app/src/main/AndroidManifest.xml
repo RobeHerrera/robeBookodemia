@@ -3,6 +3,7 @@
     package="com.robe.robebookodemia">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -20,9 +21,9 @@
         <activity
             android:name=".NewAccount"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".WelcomeLogin" />
         <activity
-            android:name=".MainActivity"
+            android:name=".WelcomeLogin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

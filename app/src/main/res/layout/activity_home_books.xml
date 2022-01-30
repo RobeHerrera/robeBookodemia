@@ -23,7 +23,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imgBanner"
+                android:id="@+id/img_new_account"
                 android:layout_width="413dp"
                 android:layout_height="198dp"
                 android:scaleType="centerCrop"
@@ -59,7 +59,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/btnBackNewRegister"
+                android:id="@+id/btnNewRegister"
                 style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
                 android:textStyle="normal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnBackNewRegister" />
+                app:layout_constraintTop_toBottomOf="@+id/btnNewRegister" />
 
             <TextView
                 android:id="@+id/txtNewRegDes2"

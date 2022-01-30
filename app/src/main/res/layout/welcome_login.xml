@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".WelcomeLogin">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -23,10 +21,13 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imgBanner"
-                android:layout_width="411dp"
+                android:id="@+id/img_new_account"
+                android:layout_width="0dp"
                 android:layout_height="731dp"
+                android:contentDescription="@string/banner"
+                android:scaleType="fitXY"
                 android:src="@drawable/welcome_bookodemia"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:srcCompat="@drawable/welcome_bookodemia" />
@@ -46,57 +47,47 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/otf_email"
+                android:id="@+id/til_login_email"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
-                android:layout_marginEnd="32dp"
                 android:hint="@string/txtEmail"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView"
+                app:layout_constraintStart_toStartOf="@+id/textView"
                 app:layout_constraintTop_toBottomOf="@+id/textView">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_login_email"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:textColorHint="#795548"
+                    tools:ignore="TextContrastCheck"
+                    tools:text="robekodemia@outlook.com"
+                    android:inputType="textEmailAddress"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/otf_pass"
+                android:id="@+id/til_login_pass"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="32dp"
                 android:hint="@string/txtPassword"
                 app:endIconMode="password_toggle"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/otf_email">
+                app:layout_constraintEnd_toEndOf="@+id/til_login_email"
+                app:layout_constraintStart_toStartOf="@+id/til_login_email"
+                app:layout_constraintTop_toBottomOf="@+id/til_login_email">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_login_pass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    tools:ignore="TextContrastCheck"
+                    tools:text="432" />
             </com.google.android.material.textfield.TextInputLayout>
-
-            <Button
-                android:id="@+id/btnLogin"
-                android:layout_width="347dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="56dp"
-                android:layout_marginEnd="32dp"
-                android:onClick="myLogin"
-                android:text="@string/txtLogin"
-                android:textSize="14sp"
-                app:cornerRadius="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/otf_pass" />
 
             <!--            <TextView-->
             <!--                android:id="@+id/textView2"-->
@@ -115,37 +106,58 @@
 
 
             <Button
-                android:id="@+id/btnBackNewRegister"
+                android:id="@+id/btnLogin"
+                android:layout_width="346dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="56dp"
+                android:text="@string/txtLogin"
+                android:textSize="14sp"
+                app:cornerRadius="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/til_login_pass"
+                app:layout_constraintHorizontal_bias="0.416"
+                app:layout_constraintStart_toStartOf="@+id/pb_login"
+                app:layout_constraintTop_toBottomOf="@+id/til_login_pass" />
+
+            <Button
+                android:id="@+id/btnNewRegister"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
                 android:gravity="center"
-                android:onClick="newAccount"
-                android:outlineAmbientShadowColor="@color/teal_700"
                 android:text="@string/txtNoRegister"
                 android:textAllCaps="false"
                 android:textSize="12sp"
 
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btnLogin"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/btnLogin"
                 app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+            <ProgressBar
+                android:id="@+id/pb_login"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/til_login_pass"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/til_login_pass"
+                app:layout_constraintTop_toBottomOf="@+id/til_login_pass" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <!--    <androidx.fragment.app.FragmentContainerView-->
-<!--        android:id="@+id/fragmentContainerView"-->
-<!--        android:name="com.robe.robebookodemia.NewRegister"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <!--        android:id="@+id/fragmentContainerView"-->
+    <!--        android:name="com.robe.robebookodemia.NewRegister"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
