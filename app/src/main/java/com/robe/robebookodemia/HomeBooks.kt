@@ -21,6 +21,28 @@ class HomeBooks : AppCompatActivity() {
 
         initRecyclerLibros()
 
+        initBottomNavigation()
+
+    }
+
+    private fun initBottomNavigation() {
+        bottomNavigationView2.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.menuUser -> {
+                    startActivity(Intent(this, User::class.java))
+                    true
+                }
+                /*R.id.menuHome -> {
+                    setCurrentFragment(homeFragment)
+                    true
+                }
+                R.id.menuBooks -> {
+                    setCurrentFragment(userFragment)
+                    true
+                }*/
+                else -> false
+            }
+        }
     }
 
     fun initRecyclerLibros(){

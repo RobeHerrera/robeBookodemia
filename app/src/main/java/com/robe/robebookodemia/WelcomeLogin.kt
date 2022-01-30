@@ -37,6 +37,9 @@ class WelcomeLogin : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        if(validarSesion(applicationContext)){
+            lanzarActivity()
+        }
         super.onCreate(savedInstanceState)
         setContentView(R.layout.welcome_login)
 
@@ -55,6 +58,11 @@ class WelcomeLogin : AppCompatActivity() {
 
         init()
 
+    }
+    fun lanzarActivity(){
+        val intent = Intent(this, HomeBooks::class.java)
+        startActivity(intent)
+        finish()
     }
     private fun init(){
         til_correo = findViewById(R.id.til_login_email)
@@ -92,8 +100,7 @@ class WelcomeLogin : AppCompatActivity() {
                     initSesion(applicationContext,jsonObject)
                         sleep(1000)
                     if(validarSesion(applicationContext)){
-                        startActivity(Intent(this, HomeBooks::class.java))
-                        finish()
+                        lanzarActivity()
                     }
                 },
                 { error ->
