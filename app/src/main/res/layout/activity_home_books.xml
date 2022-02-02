@@ -2,184 +2,239 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray"
-    tools:context=".NewRegister">
+    tools:context=".User">
 
-    <ScrollView
-        android:id="@+id/scrollView2"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/innerConstraint_home"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
+        app:layout_constraintBottom_toTopOf="@+id/linear"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+        <ScrollView
+            android:id="@+id/sv_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/img_new_account"
-                android:layout_width="413dp"
-                android:layout_height="198dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/banner"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-            <!--                android:forceHasOverlappingRendering="true"-->
-
-            <ImageView
-                android:id="@+id/imageBanner"
-                android:layout_width="206dp"
-                android:layout_height="4dp"
-                android:layout_marginTop="128dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/barra" />
-
-            <TextView
-                android:id="@+id/btnBackNewRegister2"
-                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="64dp"
-                android:gravity="center"
-                android:hapticFeedbackEnabled="true"
-                android:text="Hola"
-                android:textAllCaps="false"
-                android:textColor="@color/blue_700"
-                android:textSize="32sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/btnNewRegister"
-                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="-20dp"
-                android:gravity="center"
-                android:hapticFeedbackEnabled="false"
-                android:text="FerLima"
-                android:textAllCaps="false"
-                android:textColor="@color/blue_900"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnBackNewRegister2" />
-
-
-            <TextView
-                android:id="@+id/txtNewRegDes"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="16dp"
-                android:gravity="center"
-                android:text="Más populares"
-                android:textColor="@color/blue_A200"
-                android:textSize="24sp"
-                android:textStyle="normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnNewRegister" />
-
-            <TextView
-                android:id="@+id/txtNewRegDes2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="16dp"
-                android:gravity="left"
-                android:text="Recién Agregados"
-                android:textColor="@color/blue_A200"
-                android:textSize="16sp"
-                android:textStyle="normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView" />
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtNewRegDes"
-                app:srcCompat="@drawable/libros" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="8dp"
-                app:contentPaddingBottom="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView4">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="100dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                    <TextView
-                        android:id="@+id/textNewRegisterHeader"
+                    <ImageView
+                        android:id="@+id/image_home_banner"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:gravity="center"
-                        android:text="Libros | Categorias | Autores"
-                        android:textColor="@color/blue_900"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/banner"
+                        android:scaleType="centerCrop"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/banner" />
+
+                    <TextView
+                        android:id="@+id/text_home_hola"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-14dp"
+                        android:text="@string/txt_hello"
+                        android:textColor="@color/blue_900"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@id/text_home_nombre"
+                        app:layout_constraintStart_toStartOf="@id/text_home_nombre"
+                        tools:ignore="TextContrastCheck" />
+
+                    <TextView
+                        android:id="@+id/text_home_nombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginBottom="-4dp"
+                        android:text="@string/txtUser"
+                        android:textColor="@color/blue_900"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/image_home_banner"
+                        app:layout_constraintStart_toStartOf="@id/image_home_banner" />
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:dividerColor="@color/blue_900"
+                        app:dividerThickness="4dp"
+                        app:layout_constraintBottom_toBottomOf="@id/image_home_banner"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="parent" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/text_mas_populares"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/populares"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue_700"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+                    tools:ignore="TextContrastCheck" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerview_libros"
-                android:layout_width="0dp"
-                android:layout_height="128dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtNewRegDes2" />
+                <com.jackandphantom.carouselrecyclerview.CarouselRecyclerview
+                    android:id="@+id/recycler_populares"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_mas_populares" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardView_home_filtros"
+                    style="?attr/materialCardViewElevatedStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:backgroundTint="@color/white"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recycler_populares">
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:itemIconTint="@color/blue_900"
-        app:itemTextColor="@color/blue_900"
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_home_libros"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="@string/books"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="0dp"
+                            android:layout_marginVertical="12dp"
+                            android:background="@color/blue_900"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/button_home_libros"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_home_categoria"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="@string/categories"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toStartOf="@id/button_home_autores"
+                            app:layout_constraintStart_toEndOf="@+id/button_home_libros"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="0dp"
+                            android:layout_marginVertical="12dp"
+                            android:background="@color/blue_900"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/button_home_categoria"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_home_autores"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/author"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/button_home_categoria"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/text_home_recien_agregados"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginVertical="12dp"
+                    android:text="@string/recently_added"
+                    android:textColor="@color/blue_700"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardView_home_filtros"
+                    tools:ignore="TextContrastCheck" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_libros"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutAnimation="@anim/layout_animation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_home_recien_agregados" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="408dp"
+        android:layout_height="51dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:itemIconTint="@color/blue_900"
+            app:itemTextColor="@color/blue_900"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/menu" />
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -66,6 +66,17 @@ fun anyErrorMail(
     return error
 }
 
+fun eliminarSesion(context: Context){
+    val sharedPreferences = obtenerPreferencias(context)
+    with(sharedPreferences.edit()){
+        clear()
+        apply()
+    }
+}
+fun obtainToken(context: Context,clave: String): String{
+    val sharedPreferences = obtenerPreferencias(context)
+    return sharedPreferences.getString(clave,"").toString()
+}
 fun anyErrorPass(
     context: Context,
     tiet: TextInputEditText,

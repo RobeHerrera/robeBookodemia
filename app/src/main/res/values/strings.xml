@@ -52,5 +52,13 @@
     <string name="tv_cuenta">¿No tienes cuenta?</string>
     <string name="tv_registro_aqui">Registrate aquí</string>
     <string name="error_different_pass">Diferentes Contraseñas</string>
+    <string name="txt_hello">Hola</string>
+    <string name="populares">Más populares</string>
+    <string name="books">Libros</string>
+    <string name="categories">Categorías</string>
+    <string name="author">Autores</string>
+    <string name="recently_added">Recién agregados</string>
+    <string name="img_populares">Libros mas populares</string>
+    <string name="by_author">by %s</string>
 
 </resources>

@@ -75,7 +75,7 @@
                 tools:text="Hola Roberto H." />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btn_close_sesion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
